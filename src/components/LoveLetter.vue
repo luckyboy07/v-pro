@@ -8,7 +8,7 @@
           <div class="words line1">To: Nieva Marie Tariao</div>
           <div class="words line2">Would you be my date on</div>
           <div class="words line3">Valentine's Day?</div>
-          <div class="words line4">Feb. 14, 2028</div>
+          <div class="words line4">Feb. 14, 2025</div>
         </div>
         <div class="hearts">
           <div class="heart a1"></div>
@@ -43,7 +43,7 @@
         <div class="celebration">🎉 💖 🎊</div>
         <h2>Yes! 💕</h2>
         <p>You've made me the happiest person! ✨</p>
-        <p class="date-reminder">See you on Feb. 14, 2028!</p>
+        <p class="date-reminder">See you on Feb. 14, 2025!</p>
         <div class="floating-hearts">
           <span class="float-heart">💖</span>
           <span class="float-heart">💕</span>

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="envlope-wrapper">
-      <div id="envelope" :class="{ close: isClosed, open: !isClosed }">
+      <div id="envelope" :class="{ close: isClosed, open: !isClosed }" @click="openEnvelope">
         <div class="front flap"></div>
         <div class="front pocket"></div>
         <div class="letter">
@@ -33,9 +33,9 @@
         {{ getNoMessage() }}
       </div>
     </div>
-    <div class="reset" v-else>
+    <!-- <div class="reset" v-else>
       <button @click="openEnvelope">Open</button>
-    </div>
+    </div> -->
 
     <!-- Success Modal -->
     <div class="modal" v-if="showSuccessModal">
@@ -155,7 +155,7 @@ const getNoMessage = () => {
   border-bottom-right-radius: 6px;
   margin-left: auto;
   margin-right: auto;
-  top: 150px;
+  top: 250px;
   background-color: #d9534f;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
@@ -246,7 +246,7 @@ const getNoMessage = () => {
   position: relative;
   display: flex;
   gap: 15px;
-  margin-top: 20px;
+  margin-top:70px;
   min-height: 80px;
   width: 100%;
   max-width: 400px;

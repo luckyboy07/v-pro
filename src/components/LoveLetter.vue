@@ -72,10 +72,15 @@ const noButtonText = computed(() => {
   return 'Please? 🥺';
 });
 
-const noButtonStyle = computed(() => {
-  if (noAttempts.value === 0) return {};
+const noButtonStyle = computed<Record<string, string>>(() => {
+  if (noAttempts.value === 0) return {
+    position: '',
+    left: '',
+    top: '',
+    transition: ''
+  };
   return {
-    position: 'absolute',
+    position: 'absolute' as const,
     left: `${noButtonPosition.value.x}px`,
     top: `${noButtonPosition.value.y}px`,
     transition: 'all 0.3s ease'

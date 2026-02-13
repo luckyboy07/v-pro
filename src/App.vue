@@ -1,8 +1,8 @@
 <template>
   <div class="app">
-    <FloatingHearts />
+    <FloatingHearts ref="floatingHeartsRef"/>
     <!-- <ProposalCard /> -->
-    <LoveLetter />
+    <LoveLetter @yes-clicked="handleYesClicked"/>
     <!-- <button class="music-toggle" @click="toggleMusic">
       <span v-if="musicPlaying">🔊</span>
       <span v-else>🔈</span>
@@ -20,6 +20,11 @@ import ProposalCard from './components/ProposalCard.vue'
 
 const audio = ref(null)
 const musicPlaying = ref(false)
+const floatingHeartsRef = ref()
+
+const handleYesClicked = () => {
+  floatingHeartsRef.value?.switchToImages()
+}
 
 function toggleMusic() {
   if (!audio.value) return

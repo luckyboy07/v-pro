@@ -64,6 +64,8 @@ const noAttempts = ref(0);
 const noButtonPosition = ref({ x: 0, y: 0 });
 const showSuccessModal = ref(false);
 
+const emit = defineEmits(['yes-clicked']);
+
 const noButtonText = computed(() => {
   if (noAttempts.value === 0) return 'No';
   if (noAttempts.value < 3) return 'No...?';
@@ -117,10 +119,11 @@ const handleNo = () => {
 
 const handleYes = () => {
   showSuccessModal.value = true;
+  emit('yes-clicked');
   setTimeout(() => {
     showSuccessModal.value = false;
     closeEnvelope();
-  }, 5000);
+  }, 3000);
 };
 
 const getNoMessage = () => {
